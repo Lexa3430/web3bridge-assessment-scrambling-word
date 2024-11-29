@@ -5,7 +5,7 @@ const Timer = ({ initialTime, onTimeUp }) => {
 
   useEffect(() => {
     if (timeLeft <= 0) {
-      onTimeUp(); // Trigger the callback when time is up
+      onTimeUp(); 
       return;
     }
 
@@ -13,7 +13,7 @@ const Timer = ({ initialTime, onTimeUp }) => {
       setTimeLeft((prevTime) => prevTime - 1);
     }, 1000);
 
-    return () => clearInterval(timer); // Clean up the interval
+    return () => clearInterval(timer);
   }, [timeLeft, onTimeUp]);
 
   return (

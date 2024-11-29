@@ -40,7 +40,7 @@ const Home = () => {
     setScrambledWord(scrambleWord(nextWord));
     setGuess("");
     setHint("");
-    setTimeKey((prevKey) => prevKey + 1); // Reset the timer
+    setTimeKey((prevKey) => prevKey + 1);
   };
 
   const handleHint = () => setHint(getHint(currentWord));
